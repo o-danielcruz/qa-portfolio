@@ -31,7 +31,7 @@ describe('Product Catalog', () => {
   context('Sorting', () => {
 
     it('should sort products by name A to Z', () => {
-      cy.get('[data-test="product_sort_container"]').select('az');
+      cy.get('.product_sort_container').select('az');
 
       cy.get('.inventory_item_name').then(($items) => {
         const names = [...$items].map((el) => el.innerText);
@@ -41,7 +41,7 @@ describe('Product Catalog', () => {
     });
 
     it('should sort products by name Z to A', () => {
-      cy.get('[data-test="product_sort_container"]').select('za');
+      cy.get('.product_sort_container').select('za');
 
       cy.get('.inventory_item_name').then(($items) => {
         const names = [...$items].map((el) => el.innerText);
@@ -51,7 +51,7 @@ describe('Product Catalog', () => {
     });
 
     it('should sort products by price low to high', () => {
-      cy.get('[data-test="product_sort_container"]').select('lohi');
+      cy.get('.product_sort_container').select('lohi');
 
       cy.get('.inventory_item_price').then(($prices) => {
         const prices = [...$prices].map((el) => parseFloat(el.innerText.replace('$', '')));
@@ -61,7 +61,7 @@ describe('Product Catalog', () => {
     });
 
     it('should sort products by price high to low', () => {
-      cy.get('[data-test="product_sort_container"]').select('hilo');
+      cy.get('.product_sort_container').select('hilo');
 
       cy.get('.inventory_item_price').then(($prices) => {
         const prices = [...$prices].map((el) => parseFloat(el.innerText.replace('$', '')));
