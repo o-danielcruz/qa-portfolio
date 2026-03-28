@@ -1,0 +1,21 @@
+{
+  "name": "cypress-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "description": "Cypress E2E test suite for SauceDemo — QA Engineer portfolio project",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:auth": "cypress run --spec 'cypress/e2e/01_authentication.cy.js'",
+    "test:products": "cypress run --spec 'cypress/e2e/02_product_catalog.cy.js'",
+    "test:cart": "cypress run --spec 'cypress/e2e/03_shopping_cart.cy.js'",
+    "test:checkout": "cypress run --spec 'cypress/e2e/04_checkout_flow.cy.js'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.13.0"
+  }
+}
