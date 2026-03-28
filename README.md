@@ -38,8 +38,9 @@ Collection of professionally written test cases covering common web application 
 ### [Bug Reports Examples](./bug-reports/)
 Sample bug reports demonstrating clear documentation and reproduction steps.
 
-### [Test Automation Projects](./automation/) *(Coming Soon)*
-Selenium and Cypress automation scripts currently in development.
+### [Test Automation Projects](./automation/)
+34 automated E2E test scenarios using Cypress, covering authentication, 
+product catalog, shopping cart, and full checkout flow
 
 ## 🎓 Certifications
 
