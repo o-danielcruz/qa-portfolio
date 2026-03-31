@@ -24,7 +24,7 @@ I'm Daniel Cruz, a QA Engineer with experience in manual testing and test automa
 - Jira, TestRail, GitLab, Slack
 - Git, GitHub
 - Linux, Windows
-- Currently exploring: Selenium, Cypress, Postman
+- Cypress, Postman
 
 **Programming:**
 - Java, JavaScript, Python, SQL
