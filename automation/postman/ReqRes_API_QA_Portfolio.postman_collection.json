@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "ReqRes API — QA Portfolio",
-    "description": "Complete API test collection for ReqRes (https://reqres.in).\nCovers Users CRUD and Authentication endpoints with test assertions.\n\nAuthor: Daniel Cruz — QA Engineer\nLinkedIn: linkedin.com/in/o-danielcruz",
+    "description": "Complete API test collection for ReqRes (https://reqres.in).\nCovers Users CRUD and Authentication endpoints with test assertions.\n\nAuthor: Daniel Cruz — QA Engineer\nLinkedIn: linkedin.com/in/o-danielcruz\n\nSETUP: Add your ReqRes API key in the collection variable apiKey.\nGet a free key at: https://app.reqres.in/api-keys",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
@@ -18,6 +18,11 @@
     {
       "key": "authToken",
       "value": "",
+      "type": "string"
+    },
+    {
+      "key": "apiKey",
+      "value": "YOUR_API_KEY_HERE",
       "type": "string"
     }
   ],
@@ -132,7 +137,12 @@
           "request": {
             "method": "POST",
             "url": "{{baseUrl}}/users",
-            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": "{\n  \"name\": \"Daniel Cruz\",\n  \"job\": \"QA Engineer\"\n}"
@@ -173,7 +183,12 @@
           "request": {
             "method": "PUT",
             "url": "{{baseUrl}}/users/{{userId}}",
-            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": "{\n  \"name\": \"Daniel Cruz\",\n  \"job\": \"Senior QA Engineer\"\n}"
@@ -207,7 +222,12 @@
           "request": {
             "method": "PATCH",
             "url": "{{baseUrl}}/users/{{userId}}",
-            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": "{\n  \"job\": \"Lead QA Engineer\"\n}"
@@ -267,7 +287,12 @@
           "request": {
             "method": "POST",
             "url": "{{baseUrl}}/register",
-            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": "{\n  \"email\": \"eve.holt@reqres.in\",\n  \"password\": \"pistol\"\n}"
@@ -303,7 +328,12 @@
           "request": {
             "method": "POST",
             "url": "{{baseUrl}}/register",
-            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": "{\n  \"email\": \"eve.holt@reqres.in\"\n}"
@@ -331,7 +361,12 @@
           "request": {
             "method": "POST",
             "url": "{{baseUrl}}/login",
-            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": "{\n  \"email\": \"eve.holt@reqres.in\",\n  \"password\": \"cityslicka\"\n}"
@@ -361,7 +396,12 @@
           "request": {
             "method": "POST",
             "url": "{{baseUrl}}/login",
-            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": "{\n  \"email\": \"eve.holt@reqres.in\"\n}"
@@ -389,7 +429,12 @@
           "request": {
             "method": "POST",
             "url": "{{baseUrl}}/login",
-            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": "{\n  \"password\": \"cityslicka\"\n}"
@@ -413,6 +458,20 @@
           ]
         }
       ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "exec": [
+          "pm.request.headers.add({",
+          "  key: 'x-api-key',",
+          "  value: pm.collectionVariables.get('apiKey')",
+          "});"
+        ],
+        "type": "text/javascript"
+      }
     }
   ]
 }
