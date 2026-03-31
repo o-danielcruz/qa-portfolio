@@ -4,10 +4,10 @@ Welcome to my QA Engineering portfolio! This repository showcases my experience 
 
 ## 👨‍💻 About Me
 
-I'm Daniel Cruz, a QA Engineer with experience in manual testing and test automation for international edtech platforms. I work remotely with distributed teams, focusing on ensuring software quality through structured testing processes and effective collaboration.
+I'm Daniel Cruz, a QA Engineer with experience in manual testing and test automation for international SaaS platforms. I work remotely with distributed teams, focusing on ensuring software quality through structured testing processes and effective collaboration.
 
 - 🔍 **Specialties:** Manual Testing, Test Case Design, Bug Tracking, Agile/Scrum
-- 🌱 **Currently Learning:** Selenium WebDriver, Cypress, API Testing with Postman
+- 🌱 **Currently Learning:** Cypress, API Testing with Postman
 - 🌍 **Languages:** Portuguese (Native), English (Advanced), Spanish (Advanced)
 - 📍 **Location:** Porto Alegre, Brazil (Remote work)
 
